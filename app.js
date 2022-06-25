@@ -1,22 +1,8 @@
-let time=document.querySelector('#time');
-let wrapper=document.querySelector('#wrapper'); 
 
-wrapper.addEventListener('onload',getDate(), false)
-
-
-//setting AM and PM
-
-
-
-
-
-
-
-
-
-
-
-
+function tick () {
+    getDate();
+    setInterval(getDate, 1000);
+}
 
 //parse days to string
 function getWeekName(name) {
@@ -45,10 +31,29 @@ function getDate() {
    let secs= setDate.getSeconds();
    let days= setDate.getDay();
 
-   time.innerHTML=
-   `<div>${hours}::${mins}:: ${secs} </div>`
+   //setting AM and PM
+   let ap = "AM";
+   if (hours > 12) {
+       hours = hours - 12;
+       ap = "PM";
+   }
+   if (hours === 0) {
+       hours = 12;
+   }
+   // Adding zeroes
+   if (secs < 10) {
+       secs = "0" + secs;
+   }
+   if (hours < 10) {
+       hours = "0" + hours;
+   }
+   if (mins < 10) {
+       mins = "0" + mins;
+   }
 
- day.innerHTML=
- `<div>${getWeekName(days)}</div>`       
+
+   time.innerHTML=hours + ":" + mins + ":" + secs+" "+ap
+
+ day.innerHTML=getWeekName(days)       
 }
 
