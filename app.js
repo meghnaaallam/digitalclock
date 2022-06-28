@@ -1,3 +1,18 @@
+function teal() {
+    document.body.style="background-color:#009688"
+}
+
+function red() {
+    document.body.style="background-color:#F44336"
+}
+
+function blue(){
+    document.body.style="background-color:#2196F3"
+}
+
+function green() {
+    document.body.style="background-color:#4CAF50"
+}
 
 function tick () {
     getDate();

@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
 </head>
 <body onload="tick()">
-    <h1>digital clock</h1>
-    <div id="wrapper">
+    <div class="clock" id="wrapper">
         <div id="time"></div>
         <div id="day"></div>
     </div>
     <div class="background-colors">
-        <button id="teal">+</button>
-        <button id="blue">+</button>
-        <button id="green">+</button>
-        <button id="yellow">+</button>
+        <button id="teal" onclick="teal()"></button>
+        <button id="red" onclick="red()"></button>
+        <button id="green" onclick="green()"></button>
+        <button id="blue" onclick="blue()"></button>
     </div>
     <script src="app.js"></script>
 </body>
